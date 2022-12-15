@@ -1,0 +1,29 @@
+{
+  "name": "airbnb-api",
+  "version": "1.0.0",
+  "description": "API that gets data from the AirBnB website",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "api",
+    "airbnb",
+    "express",
+    "node",
+    "cheerio",
+    "axios"
+  ],
+  "author": "steve atwiine",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.2.1",
+    "cheerio": "^1.0.0-rc.12",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
