@@ -11,7 +11,7 @@ const PORT = process.env.PORT||3000;
 let articles = [];
 
 // GET routes.
-app.get("/rent", (req, res) => {
+app.get("/holiday-and-vacations-with-packages", (req, res) => {
     axios.get("https://www.expedia.com/")
         .then((response) => {
             const html = response.data;
@@ -19,9 +19,9 @@ app.get("/rent", (req, res) => {
             $('a', html).each(function() {
                 const text = $(this).text();
                 const link = $(this).attr("href");
-                if(!link.includes("https://www.expedia.com/")) {
-                    articles.push()
-                } else {
+                if(!link.includes("https://www.expedia.com/")) { // If website does not include "https://www.expedia.com"
+                    articles.push() // Do not add to articles array
+                } else { // Else add to articles array
                     articles.push({
                         text,
                         link
